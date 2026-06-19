@@ -1,0 +1,73 @@
+import React from 'react'
+import Link from 'next/link'
+
+export default function HeroSections() {
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-900 py-24 sm:py-32">
+      {/* เอฟเฟกต์แสงไฟเรืองแสงด้านหลังพื้นหลัง */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl"></div>
+        <div className="absolute top-1/2 right-0 h-96 w-96 rounded-full bg-purple-500/10 blur-3xl"></div>
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          
+          {/* ส่วนเนื้อหาฝั่งซ้าย (ข้อความและปุ่ม) */}
+          <div className="text-center lg:text-left">
+            <span className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-sm font-medium text-indigo-300 backdrop-blur-md">
+              <span className="flex h-2 w-2 rounded-full bg-indigo-400 animate-pulse" />
+              🚀 ยินดีต้อนรับสู่โลกนวัตกรรม
+            </span>
+
+            <h1 className="mt-8 text-4xl font-extrabold tracking-tight text-white sm:text-6xl lg:leading-[1.15]">
+              สร้างอนาคตด้วย
+              <span className="mt-2 block bg-gradient-to-r from-yellow-200 via-amber-300 to-orange-400 bg-clip-text font-black text-transparent">
+                เทคโนโลยีและนวัตกรรม
+              </span>
+            </h1>
+
+            <p className="mt-6 text-lg leading-relaxed text-slate-300 max-w-xl mx-auto lg:mx-0">
+              รับพัฒนาเว็บไซต์ แอปพลิเคชัน และระบบสารสนเทศครบวงจร 
+              ด้วยเทคโนโลยีล้ำสมัยที่พร้อมจะขับเคลื่อนและยกระดับองค์กรของคุณสู่ยุคดิจิทัล
+            </p>
+
+            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+              <Link
+                href="/about"
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 px-8 py-3.5 font-semibold text-white shadow-lg shadow-indigo-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-indigo-500/35"
+              >
+                เรียนรู้เพิ่มเติม
+              </Link>
+
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900/50 px-8 py-3.5 font-semibold text-slate-200 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-500 hover:bg-slate-900"
+              >
+                ติดต่อเรา
+              </Link>
+            </div>
+          </div>
+
+          {/* ส่วนเนื้อหาฝั่งขวา (รูปภาพกราฟิก) */}
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md">
+              {/* แสงออร่าสีม่วง/น้ำเงินด้านหลังรูป */}
+              <div className="absolute inset-0 -m-4 animate-pulse rounded-3xl bg-gradient-to-r from-indigo-500 to-purple-500 opacity-20 blur-2xl"></div>
+              
+              {/* กรอบรูปสไตล์กระจกหรูหรา */}
+              <div className="relative overflow-hidden rounded-3xl border border-slate-700/50 bg-slate-900/40 p-3 backdrop-blur-xl shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800"
+                  alt="Modern Technology Space"
+                  className="w-full h-auto rounded-2xl object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  )
+}
